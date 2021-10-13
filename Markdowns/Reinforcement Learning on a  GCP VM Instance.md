@@ -64,19 +64,19 @@ This part was referenced from [here](https://cloud.google.com/python/docs/setup#
 3. Manually install wget package for Linux
 4. Manually install latest python pip version  
 5. Create a local python virtual environment for a specific project 
-6. Install some packages to our project
+6. Install some packages to virtual environment project
 7. Install a python editor
 
 Before going through this section, please open your instance SSH terminal (see last section). Following the ordered list above, we first would like to update the Linux instance apt (do not count on GCP to initiate your instance with the most updated version, although it might be the case)
 
-#### Update Linux's Advanced Packaging Tool (APT)
+### 1. Update Linux's Advanced Packaging Tool (APT)
 To update apt run the next command in the terminal
 
 ```
 sudo apt update
 ```
 
-#### Install python3
+### 2. Install python3
 Next, let us install python3 by running
 
 ```
@@ -100,14 +100,14 @@ install the python3 virtual environment package
 sudo apt install python3-venv
 ```
 
-#### Manually install wget package for Linux
+### 3. Manually install wget package for Linux
 Next, in order to install manually the latest pip package we need to use Linux's **wget** command which is not automatically installed, so let us install it by running
 
 ```
 sudo apt install wget
 ```
 
-#### Manually install latest python pip version 
+### 4. Manually install latest python pip version 
 Downloading a script to get latest **pip** version
 
 ```
@@ -131,8 +131,49 @@ you should see something similar to this
 
 ![](../Assets/GCP_pip_install.png)
 
-#### Create a local python virtual environment for a specific project
+### 5. Create a local python virtual environment for a specific project
 
+To create a python3 virtual environment we should run the next command 
+
+```
+python3 -m venv /path/to/new/virtual/environment
+```
+
+For example, the command
+```
+python3 -m venv env
+```
+will create a new directory called ```env``` (if not already exist) inside the current directory and will initiate a new virtual environment in that new directory (more info in [venv docs](https://docs.python.org/3/library/venv.html)). If everything went ok, listing the content inside the target directory (```env``` in the example) you should see something similar to this
+
+![](../Assets/GCP_env_listing.png)
+
+To activate the virtual environment one should run the next command **outside** the ```env``` directory
+
+```
+source env/bin/activate
+```
+
+or the next **inside** the ```env``` directory 
+
+```
+source bin/activate
+```
+
+if the virtual environment is active you should see ```<(name-of-your-target-folder)>``` in front of the command line header, similar to that
+
+![](../Assets/GCP_venv_activate.png)
+
+To deactivate the virtual environment justs run
+
+```
+deactivate
+```
+
+### 6. Install some packages to virtual environment project
+
+In order to install some packages to the virtual environment we created we first need to activate it (see command above). Next we can use the well known ```pip install <name-of-package>``` to install a specific package. When done, deactivate the virtual environment.
+
+### 7. Install a python editor
 
 
 

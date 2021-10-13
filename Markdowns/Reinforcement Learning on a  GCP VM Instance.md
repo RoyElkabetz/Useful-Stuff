@@ -162,6 +162,14 @@ if the virtual environment is active you should see ```<(name-of-your-target-fol
 
 ![](../Assets/GCP_venv_activate.png)
 
+First thing after you activate your new virtual environment you should upgrade pip by running
+
+```
+pip install --upgrade pip
+```
+>_it turns out that even if the latest pip version is installed on your VM, a new virtual environment would be initialized with the newest pip version in the linux package index, which is probably not the latest. You can check the pip version in the linux index with ```sudo apt show versions python3-pip```. To save yourself some troubles in the future, first thing when activating your newly venv, upgrade pip !!!_
+
+
 To deactivate the virtual environment justs run
 
 ```
@@ -175,12 +183,60 @@ In order to install some packages to the virtual environment we created we first
 
 ## Initiate Jupyter Notebook on a GCP VM Instance
 
-In this section: 
+In this section I referenced some steps from [here](https://www.datacamp.com/community/tutorials/google-cloud-data-science). 
 
-1. how to install Jupyter onto a GCP VM instance with or without virtual environment
+1. Install Jupyter onto a GCP VM instance with a virtual environment
 2. Configure the VM to allow communication with Jupyter
 3. Configure Jupyter and setting up a password
 4. Open a Jupyter-notebook editor and running a python script 
+
+As a first step we need to activate our virtual environment with 
+
+```
+source <your-venv-name>/bin/activate
+```
+When its active you should verify you have the latest pip version by running
+
+```
+pip install --upgrade pip
+```
+
+Now, having an **activated** venv with the latest pip version we can begin.
+
+### Install Jupyter onto a GCP VM instance with a virtual environment
+
+To install the Jupyter package you should run
+
+```
+pip install jupyter
+```
+
+you can check the installed version by typing in the terminal
+
+```
+jupyter --version
+```
+If everything went well you should see something like this
+
+![](../Assets/GCP_venv_jupyter_version.png)
+
+### Configure the VM to allow communication with Jupyter
+
+In order to allow the VM to work with Jupyter-notebook we need to enable **HTTP, HTTPS** traffic and to write a new Firewall rule. To see how to create from scratch a VM instance with HTTP and HTTPS traffic allowed, see the **Create a GCP VM Instance** section above. In case you already have a working VM instance which you would like to reconfigure, follow the next few steps.
+
+- In your GCP account go to **Compute Engine** --> **VM instances** and click on the name of your VM. Then, verify that 'Allow HTTP traffic' and 'Allow HTTPS traffic' are marked. If they are not marked, click on **EDIT** in the top of the page and mark them both.
+
+![](../Assets/GCP_http_allowed.png) 
+
+- Next, open the navigation menu on the top left and scroll down to **VPC network** --> **Firewall**. Select **CREATE FIREWALL RULE** in the top. Give a name to your rule and scroll down to **Targets**, in the drop down select **All instances in the network**.
+- In **Source IP ranges** write the next IP address: 0.0.0.0/0.
+- Under **Protocols and Ports** mark **tcp** and type in 8888.
+
+It should look like this
+
+![](../Assets/GCP_firewall_rule.png)
+
+Finally,  press **CREATE** to create the rule.
 
 
 ## Clone a Github Repository to a GCP VM Instance

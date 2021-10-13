@@ -55,7 +55,7 @@ The green circle under **STATUS** means our instance is currently running. A run
 ![](../Assets/GCP_SSH.png)
 
 
-## Install Python to Linux VM Instance
+## Install Python on a Linux GCP VM Instance
 
 This part was referenced from [here](https://cloud.google.com/python/docs/setup#linux). In this section we will see how to do the next things:
   
@@ -173,12 +173,18 @@ deactivate
 In order to install some packages to the virtual environment we created we first need to activate it (see command above). Next we can use the well known ```pip install <name-of-package>``` to install a specific package. When done, deactivate the virtual environment.
 
 
+## Initiate Jupyter Notebook on a GCP VM Instance
+
+In this section: 
+
+1. how to install Jupyter onto a GCP VM instance with or without virtual environment
+2. Configure the VM to allow communication with Jupyter
+3. Configure Jupyter and setting up a password
+4. Open a Jupyter-notebook editor and running a python script 
 
 
-## Clone a Github Repository
+## Clone a Github Repository to a GCP VM Instance
 
-## Initiate Jupyter Notebook in VM
-
-## Install Gym with Atari libraries 
+## Install Gym with Atari libraries (with ROMs) on a GCP VM Instance 
 
 

@@ -65,7 +65,6 @@ This part was referenced from [here](https://cloud.google.com/python/docs/setup#
 4. Manually install latest python pip version  
 5. Create a local python virtual environment for a specific project 
 6. Install some packages to virtual environment project
-7. Install a python editor
 
 Before going through this section, please open your instance SSH terminal (see last section). Following the ordered list above, we first would like to update the Linux instance apt (do not count on GCP to initiate your instance with the most updated version, although it might be the case)
 
@@ -172,8 +171,6 @@ deactivate
 ### 6. Install some packages to virtual environment project
 
 In order to install some packages to the virtual environment we created we first need to activate it (see command above). Next we can use the well known ```pip install <name-of-package>``` to install a specific package. When done, deactivate the virtual environment.
-
-### 7. Install a python editor
 
 
 

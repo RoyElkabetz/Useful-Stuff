@@ -238,6 +238,54 @@ It should look like this
 
 Finally,  press **CREATE** to create the rule.
 
+### Configure Jupyter and setting up a password
+Jupyter notebooks come with a configuration file that needs to be generated and edited in order to setup online access to your notebooks. To create a Jupyter configuration file run
+
+```
+jupyter notebook --generate-config
+``` 
+Then, pick a strong password for online connection by running
+
+```
+jupyter notebook password
+```
+
+Next, we need to change the default ip configuration of Jupyter-notebook from 'localhost' to any ip. First, open the configuration file in a **nano** text editor by running
+
+```
+nano .jupyter/jupyter_notebook_config.py
+```
+>_you can use what ever editor is available._
+
+then you could scroll down to the commented ```# c.NotebookApp.ip = 'localhost'``` command, uncomment it, and switch `'localhost'` with `'*'` (means: listening to any ip). Another way could be by just adding the next command somewhere in the file (the top for example)
+
+```
+c.NotebookApp.ip = '*'
+```
+after writing the last command just save and exit from the file.
+>_In nano this can be done by pressing `ctrl + x` and hitting `y` to save._
+
+This will allow the notebook to be available for all IP addresses on your VM and not just `http://localhost:8888`.
+
+You are now ready to lunch notebook, just run
+
+```
+jupyter-notebook --no-browser --port=8888
+```
+If Jupyter-notebook is successfully activated, you should see something like this in the terminal
+
+![](../Assets/GCP_jupyter_activation.png)
+
+In order to open the notebook on the browser go to GCP and copy your VM external IP address
+
+![](../Assets/GCP_vm_external_ip.png)
+
+Then, open in the browser the next URL:`http://<your-VM-external-IP>:8888/`, a Jupyter password window should open up. Fill in the you password from earlier and log in.
+
+
+
+
+
 
 ## Clone a Github Repository to a GCP VM Instance
 

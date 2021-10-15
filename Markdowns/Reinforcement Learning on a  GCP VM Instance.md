@@ -364,6 +364,6 @@ git clone <copied-repository-ssh-address>
 ```
 and now you have your repository in the GitProjects folder.
 
-## Install Gym with Atari libraries (with ROMs) on a GCP VM Instance 
+## Install Gym and Atari libraries (with ROMs) on a GCP VM Instance 
 
 

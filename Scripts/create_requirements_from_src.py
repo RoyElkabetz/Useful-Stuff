@@ -60,6 +60,7 @@ if __name__ == '__main__':
 			if pkg in acronim.keys():
 				pkg = acronim[pkg]
 			f.write(pkg + '==' + pkg_resources.get_distribution(pkg).version + '\n')
+	print('<8><8><8> requirements.txt was successfully created <8><8><8>')
 
 
 

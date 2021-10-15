@@ -188,7 +188,7 @@ In this section I referenced some steps from [here](https://www.datacamp.com/com
 1. Install Jupyter onto a GCP VM instance with a virtual environment
 2. Configure the VM to allow communication with Jupyter
 3. Configure Jupyter and setting up a password
-4. Open a Jupyter-notebook editor and running a python script 
+4. Add the virtual environment to Jupyter interpreters list
 
 As a first step we need to activate our virtual environment with 
 
@@ -282,6 +282,17 @@ In order to open the notebook on the browser go to GCP and copy your VM external
 
 Then, open in the browser the next URL:`http://<your-VM-external-IP>:8888/`, a Jupyter password window should open up. Fill in the you password from earlier and log in.
 
+### Add the virtual environment to Jupyter interpreters list
+In order to add a virtual environment to Jupyter we need to first create one and activate it (see file **Install Python on a Linux GCP VM Instance**). When activating it you should see the name of your virtual environment added in parenthesis (<name_of_venv>) before your username in the terminal. We need to manually add the virtual environment kernel if we want to have it in the Jupyter Notebook by running the next line 
+
+```
+python -m ipykernel install --user --name=<name-of-your-venv>
+```
+so we have set up our virtual environment kernel and it is ready to be used in the Jupyter Notebook.
+
+You can verify that it is been added by open the Jupyter-notebook in the browser as we saw earlier, and click on **New** on the top right of the screen. You should see your virtual environment name in the pop-up window 
+
+![](../Assets/GCP_venv_jupyter.png)
 
 
 

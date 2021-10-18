@@ -12,6 +12,6 @@ This repository contains a collection of useful Tutorials and Technical Know-how
 
 	
 ## Scripts
-1. Creating a requirements.txt file for a python project (without virtual environment) by parsing the project source code and reading out all the imported packages which are not python standard library packages of not self created packages. 
+1. Creating a requirements.txt file for a python project (without virtual environment) by parsing the project source code and reading out all the imported packages which are not python standard library packages or not self created packages. The scipt creates the requirements.txt file in the given path. **API**: run in terminal with the next command <br> ```python3 create_requirements_from_src.py <full-path-to-project-source-folder>```
 	- [create requirements from src](Scripts/create_requirements_from_src.py)		
 

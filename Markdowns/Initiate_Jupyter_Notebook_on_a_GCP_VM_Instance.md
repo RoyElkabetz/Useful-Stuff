@@ -41,7 +41,7 @@ If everything went well you should see something like this
 
 ### Configure the VM to allow communication with Jupyter
 
-In order to allow the VM to work with Jupyter-notebook we need to enable **HTTP, HTTPS** traffic and to write a new Firewall rule. To see how to create from scratch a VM instance with HTTP and HTTPS traffic allowed, see the [Create a GCP VM Instance](Create a GCP VM Instance.md) explanation. In case you already have a working VM instance which you would like to reconfigure, follow the next few steps.
+In order to allow the VM to work with Jupyter-notebook we need to enable **HTTP, HTTPS** traffic and to write a new Firewall rule. To see how to create from scratch a VM instance with HTTP and HTTPS traffic allowed, see the [Create a GCP VM Instance](Create_a_GCP_VM_Instance.md) explanation. In case you already have a working VM instance which you would like to reconfigure, follow the next few steps.
 
 - In your GCP account go to **Compute Engine** --> **VM instances** and click on the name of your VM. Then, verify that 'Allow HTTP traffic' and 'Allow HTTPS traffic' are marked. If they are not marked, click on **EDIT** in the top of the page and mark them both.
 
@@ -102,7 +102,7 @@ In order to open the notebook on the browser go to GCP and copy your VM external
 Then, open in the browser the next URL:`http://<your-VM-external-IP>:8888/`, a Jupyter password window should open up. Fill in the you password from earlier and log in.
 
 ### Add the virtual environment to Jupyter interpreters list
-In order to add a virtual environment to Jupyter we need to first create one and activate it (see file [Install Python on a Linux GCP VM Instance](Install Python on a Linux GCP VM Instance.md)). When activating it you should see the name of your virtual environment added in parenthesis (<name_of_venv>) before your username in the terminal. We need to manually add the virtual environment kernel if we want to have it in the Jupyter Notebook by running the next line 
+In order to add a virtual environment to Jupyter we need to first create one and activate it (see file [Install Python on a Linux GCP VM Instance](Install_Python_on_a_Linux_GCP_VM_Instance.md)). When activating it you should see the name of your virtual environment added in parenthesis (<name_of_venv>) before your username in the terminal. We need to manually add the virtual environment kernel if we want to have it in the Jupyter Notebook by running the next line 
 
 ```
 python -m ipykernel install --user --name=<name-of-your-venv>

@@ -4,11 +4,11 @@ This repository contains a collection of useful Tutorials and Technical Know-how
 
 ## Markdowns
 1. Setting up a virtual machine on Google-Cloud-Platform (GCP) for Reinforcement Learning (RL) experiments with Python, specifically with the Gym and Atari libraries.
-	- [Create a GCP VM Instance](Markdowns/Create a GCP VM Instance.md)
-	- [Install Python on a Linux GCP VM Instance](Markdowns/Install Python on a Linux GCP VM Instance.md)
-	- [Initiate Jupyter Notebook on a GCP VM Instance](Markdowns/Initiate Jupyter Notebook on a GCP VM Instance.md)
-	- [Clone a Github Repository to a GCP VM Instance](Markdowns/Clone a Github Repository to a GCP VM Instance.md)
-	- [Install Gym and Atari libraries (with ROMs) on a GCP VM Instance](Markdowns/Install Gym and Atari libraries (with ROMs) on a GCP VM Instance.md)
+	- [Create a GCP VM Instance](Markdowns/Create_a_GCP_VM_Instance.md)
+	- [Install Python on a Linux GCP VM Instance](Markdowns/Install_Python_on_a_Linux_GCP_VM_Instance.md)
+	- [Initiate Jupyter Notebook on a GCP VM Instance](Markdowns/Initiate_Jupyter_Notebook_on_a_GCP_VM_Instance.md)
+	- [Clone a Github Repository to a GCP VM Instance](Markdowns/Clone_a_Github_Repository_to_a_GCP_VM_Instance.md)
+	- [Install Gym and Atari libraries with ROMs on a GCP VM Instance](Markdowns/Install_Gym_and_Atari_libraries_with_ROMs_on_a_GCP_VM_Instance.md)
 
 	
 ## Scripts

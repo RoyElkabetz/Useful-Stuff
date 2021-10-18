@@ -11,7 +11,7 @@ This part was referenced from [here](https://cloud.google.com/python/docs/setup#
 5. Create a local python virtual environment for a specific project 
 6. Install some packages to virtual environment project
 
-Before going through this section, please open your instance SSH terminal (see [Create a GCP VM Instance](Create a GCP VM Instance.md)). Following the ordered list above, we first would like to update the Linux instance apt (do not count on GCP to initiate your instance with the most updated version, although it might be the case)
+Before going through this section, please open your instance SSH terminal (see [Create a GCP VM Instance](Create_a_GCP_VM_Instance.md)). Following the ordered list above, we first would like to update the Linux instance apt (do not count on GCP to initiate your instance with the most updated version, although it might be the case)
 
 ### 1. Update Linux's Advanced Packaging Tool (APT)
 To update apt run the next command in the terminal

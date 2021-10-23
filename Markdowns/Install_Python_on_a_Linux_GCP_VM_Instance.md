@@ -123,6 +123,10 @@ deactivate
 
 ### 6. Install some packages to virtual environment project
 
-In order to install some packages to the virtual environment we created we first need to activate it (see command above). Next we can use the well known ```pip install <name-of-package>``` to install a specific package. When done, deactivate the virtual environment.
+In order to install some packages to the virtual environment we created we first need to activate it (see command above). Next we can use the well known ```pip install <name-of-package>``` command to install a specific package or in case we got a requirements.txt file with a bunch of packages we can run the next command
+
+```pip install -r <path-to-requirements.txt>```
+
+ When done, deactivate the virtual environment.
 
 

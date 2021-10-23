@@ -43,7 +43,7 @@ next add the ssh key to the ssh-agent
 ssh-add ~/.ssh/id_ed25519
 ```
 
-Run the next command to copy the ssh public key to the clipboard 
+Run the next command to print the ssh public key to the clipboard 
 
 ```
 cat ~/.ssh/id_ed25519.pub

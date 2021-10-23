@@ -4,25 +4,13 @@
 
 In this section I referenced some steps from [here](https://www.datacamp.com/community/tutorials/google-cloud-data-science). 
 
-1. Install Jupyter onto a GCP VM instance with a virtual environment
+1. Install Jupyter onto a GCP VM instance
 2. Configure the VM to allow communication with Jupyter
 3. Configure Jupyter and setting up a password
 4. Add the virtual environment to Jupyter interpreters list
 
-As a first step we need to activate our virtual environment with 
 
-```
-source <your-venv-name>/bin/activate
-```
-When its active you should verify you have the latest pip version by running
-
-```
-pip install --upgrade pip
-```
-
-Now, having an **activated** venv with the latest pip version we can begin.
-
-### Install Jupyter onto a GCP VM instance with a virtual environment
+### Install Jupyter onto a GCP VM instance
 
 To install the Jupyter package you should run
 

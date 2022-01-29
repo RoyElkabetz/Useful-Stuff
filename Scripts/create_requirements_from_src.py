@@ -3,7 +3,8 @@ import argparse
 import pkg_resources
 
 # dictionary of packages with PyPi different names
-acronim = {'cv2': 'opencv-contrib-python'}
+acronim = {'cv2': 'opencv-contrib-python',
+		   'pybullet_envs': 'pybullet'}
 
 # Standard python libs set
 std_python_lib = set(['os', 'sys', 'time', 'copy', 'datetime', 'deepcopy', 'argparse', 'pkg_resources', 'collections'])
